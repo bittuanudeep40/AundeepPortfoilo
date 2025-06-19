@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anudeep Konagala – AI Integrated Workflow & Cyber Security & Machine and Deep Learning</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+       /* Font Faces */
+        @font-face {
+            font-family: 'Dumba';
+            src: url('./fonts/BUROKKU_TRIAL.otf') format('opentype'),
+                 url('./fonts/BUROKKU_TRIAL1.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Dumba';
+            src: url('./fonts/Dumba.woff2') format('woff2'),
+                 url('./fonts/Dumba.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Dumba', sans-serif;
+        }
+
+        /* INTRO VIDEO STYLES */
+        #intro-video-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: #000;
+          z-index: 9999;
+          overflow: hidden;
+        }
+
+        #intro-video-container video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        body.loaded #intro-video-container {
+          opacity: 0;
+          transition: opacity 1.5s ease;
+          pointer-events: none;
+        }
+
+        body.loaded #main-website {
+          opacity: 1;
+          transition: opacity 1.5s ease;
+        }
+
+        #main-website {
+          opacity: 0;
+        }
+
+        /* Background video styling */
+        #bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #fff;
+            margin: 15px auto;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links a {
+            background-color: #111;
+        }
+        .social-links a:hover {
+            background-color: #fff;
+            color: #000 !important;
+        }
+        
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .gallery-item {
+            height: 250px; 
+        }
+        .gallery-item img {
+            height: 100%;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Intro Video Section -->
+    <div id="intro-video-container">
+        <video id="introVideo" autoplay muted playsinline>
+            <source src="intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" style="background-color: rgba(0, 0, 0, 0.95);">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">KONAGALA ANUDEEP</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-medium fs-5" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-medium fs-5" href="#portfolio">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-medium fs-5" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-medium fs-5" href="#portfolio11">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-medium fs-5" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="text-center py-5 position-relative overflow-hidden" style="padding-top: 150px !important;">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="bg30.mp4" type="video/mp4" loading="lazy">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-bg"></div>
+
+        <div class="header-content container position-relative z-2">
+            <h1 class="display-3 fw-bold mb-3 text-uppercase" style="letter-spacing: 2px;">Anudeep Konagala</h1>
+            <p class="lead mb-4 opacity-75 mx-auto" style="max-width: 700px;">AI Integrated Workflow & Cyber Security & Machine and Deep Learning</p>
+            <img src="1144.jpg" alt="Anudeep Konagala" class="profile-image img-fluid rounded-circle border border-5 border-white mx-auto d-block mt-4" style="max-width: 180px;">
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="about py-5 text-center">
+        <div class="container">
+            <h2 class="section-title fw-bold fs-2 mb-5 position-relative">About Me</h2>
+            <div class="about-content mx-auto" style="max-width: 800px;">
+                <p> Highly driven AI-enthusiast and content creator with hands-on experience in developing scalable, intelligent
+ solutions integrating machine learning, deep learning, and web technologies. Passionate about building
+ secure, women-focused mobility platforms and using data-driven systems for societal impact.</p>
+ <h2 class="section-title fw-bold fs-2 mb-5 position-relative">Education </h2>
+            <div class="about-content mx-auto" style="max-width: 800px;">
+                <p> B.Tech in Computer Science — Malla Reddy University, Hyderabad 2022-2026 8.56 CGPA</p>
+                     <p>Intermediate (Class XII) — Sri Chaitanya Junior College, Hyderabad 2020-2022 85%</p>
+                     <p>SSC (Class X) — Gowtham Model School, Madinaguda, Hyderabad 2020 CGPA-9.5</p>
+                    
+               
+                <div class="row justify-content-center g-3 mt-5">
+                    <div class="col-auto">
+                        <img src="image1.jpg.jpg" alt="Anudeep working" class="img-fluid rounded" style="width: 200px; height: 200px; object-fit: cover;" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section id="portfolio" class="portfolio py-5 text-center">
+  <div class="container">
+    <h2 class="section-title fw-bold fs-2 mb-5 position-relative">Projects</h2>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      
+      <!-- Portfolio Card 1 -->
+      <div class="col">
+        <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+          <img src="dt logo.jpg" class="card-img-top img-fluid rounded mb-3" alt="Instagram – dirty_talkzzzz" style="height: 430px; object-fit: cover;" loading="lazy" />
+          <div class="card-body p-0">
+            <h5 class="fw-bold">AI Integrated Cab-Booking</h5>
+            <p>
+              A women-only cab service with voice recording, spam detection, and AI-powered safety at its core.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Card 2 -->
+      <div class="col">
+        <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+          <img src="7.jpeg" class="card-img-top img-fluid rounded mb-3" alt="YouTube Shorts – Foar7" style="height: 430px; object-fit: cover;" loading="lazy" />
+          <div class="card-body p-0">
+            <h5 class="fw-bold">Weather and Traffic Prediction</h5>
+            <p>
+              Machine and deep learning projects using Python modules for real-time forecasting and optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Card 3 -->
+      <div class="col">
+        <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+          <img src="6.png" class="card-img-top img-fluid rounded mb-3" alt="VELI - AI Integrated Chatbot for Women Safety in Cabs" style="height: 460px; object-fit: cover;" loading="lazy" />
+          <div class="card-body p-0">
+            
+            <p class="mb-0">
+              A smart, secure, and emotion-aware assistant designed for women-centric cab services. 
+              Provides real-time safety features, multilingual support, and driver-passenger engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Certifications Section -->
+    <section id="portfolio11" class="portfolio py-5 text-center">
+        <div class="container">
+            <h2 class="section-title fw-bold fs-2 mb-5 position-relative">CERTIFICATIONS</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+                        <img src="1c.jpg" class="card-img-top img-fluid rounded mb-3" alt="Instagram – grepincommunity" style="height: 200px; object-fit: cover;" loading="lazy">
+                        <div class="card-body p-0">
+                            <h3 class="card-title fw-bold fs-4 mb-3">Human Resource Analytics</h3>
+                            <p class="card-text mb-3">University of califonia Coursera</p>
+                            <a href="https://drive.google.com/drive/folders/1eKy388UwSYILxPM7ObZJmLYjt5By1JUA?usp=drive_link" class="btn btn-outline-light mt-3" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+                        <img src="2c.jpg" class="card-img-top img-fluid rounded mb-3" alt="Instagram – dirty_talkzzzz" style="height: 200px; object-fit: cover;" loading="lazy">
+                        <div class="card-body p-0">
+                            <h3 class="card-title fw-bold fs-4 mb-3">be10x workshop Certification</h3>
+                            <p class="card-text mb-3">Data analysis using AI tools</p>
+                            <a href="https://drive.google.com/drive/folders/1eKy388UwSYILxPM7ObZJmLYjt5By1JUA?usp=drive_link" class="btn btn-outline-light mt-3" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+                        <img src="3c.jpg" class="card-img-top img-fluid rounded mb-3" alt="Instagram – grepincommunity" style="height: 200px; object-fit: cover;" loading="lazy">
+                        <div class="card-body p-0">
+                            <h3 class="card-title fw-bold fs-4 mb-3">Cyber Security Fundamentals</h3>
+                            <p class="card-text mb-3"> University of london Coursera </p>
+                            <a href="https://drive.google.com/drive/folders/1eKy388UwSYILxPM7ObZJmLYjt5By1JUA?usp=drive_link" class="btn btn-outline-light mt-3" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+                        <img src="4c.jpg" class="card-img-top img-fluid rounded mb-3" alt="Instagram – grepincommunity" style="height: 200px; object-fit: cover;" loading="lazy">
+                        <div class="card-body p-0">
+                            <h3 class="card-title fw-bold fs-4 mb-3">Thesis Paper Publication</h3>
+                            <p class="card-text mb-3">@IRJMETS</p>
+                            <a href="https://www.irjmets.com/uploadedfiles/paper//issue_2_february_2025/67538/final/fin_irjmets1739435553.pdf" class="btn btn-outline-light mt-3" target="_blank">View Paper</a>
+                            <a href="https://drive.google.com/drive/folders/1eKy388UwSYILxPM7ObZJmLYjt5By1JUA?usp=drive_link" class="btn btn-outline-light mt-3" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+                        <img src="5c.jpg" class="card-img-top img-fluid rounded mb-3" alt="Instagram – grepincommunity" style="height: 200px; object-fit: cover;" loading="lazy">
+                        <div class="card-body p-0">
+                            <h3 class="card-title fw-bold fs-4 mb-3">Introduction to AI</h3>
+                            <p class="card-text mb-3">By IBM Coursera</p>
+                            <a href="https://drive.google.com/drive/folders/1eKy388UwSYILxPM7ObZJmLYjt5By1JUA?usp=drive_link" class="btn btn-outline-light mt-3" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 text-white rounded p-3 shadow-lg portfolio-card" style="background-color: #111;">
+                        <img src="6c.jpg" class="card-img-top img-fluid rounded mb-3" alt="Instagram – dirty_talkzzzz" style="height: 200px; object-fit: cover;" loading="lazy">
+                        <div class="card-body p-0">
+                            <h3 class="card-title fw-bold fs-4 mb-3">Python using AI</h3>
+                            <p class="card-text mb-3">30 Days Workshop</p>
+                            <a href="https://drive.google.com/drive/folders/1eKy388UwSYILxPM7ObZJmLYjt5By1JUA?usp=drive_link" class="btn btn-outline-light mt-3" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Skills Section -->
+    <section id="skills" class="skills py-5 text-center">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mx-auto" style="max-width: 800px;">
+                <div class="badge text-white p-3 rounded-pill fs-6 fw-normal" style="background-color: #111;">Python</div>
+                <div class="badge text-white p-3 rounded-pill fs-6 fw-normal" style="background-color: #111;">HTML</div>
+                <div class="badge text-white p-3 rounded-pill fs-6 fw-normal" style="background-color: #111;">AI tools expert</div>
+                <div class="badge text-white p-3 rounded-pill fs-6 fw-normal" style="background-color: #111;">Prompt Engineering </div>
+                <div class="badge text-white p-3 rounded-pill fs-6 fw-normal" style="background-color: #111;">Data Analysis</div>
+                <div class="badge text-white p-3 rounded-pill fs-6 fw-normal" style="background-color: #111;">Machine learning</div>
+                <div class="badge text-white p-3 rounded-pill fs-6 fw-normal" style="background-color: #111;">Git Hub</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-5 text-center">
+        <div class="container">
+            <h2 class="section-title fw-bold fs-2 mb-5 position-relative">Get In Touch</h2>
+            <div class="contact-info p-5 rounded shadow-lg mx-auto" style="max-width: 600px; background-color: #111;">
+                <p class="mb-3 fs-5"><strong>Phone:</strong> +91 8897302296</p>
+                <p class="mb-3 fs-5"><strong>Email:</strong> anudeepkuamr@gmail.com</p>
+                <p class="mb-3 fs-5"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anudeep-kumar-8aa27a2b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="text-white">Anudeep Kumar</a></p>
+                <p class="mb-4 fs-5"><strong>Location:</strong> Hyderabad, India</p>
+
+                <div class="social-links d-flex justify-content-center gap-3 mt-4">
+                    <a href="https://www.instagram.com/dirty_talkzzzz" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none" style="width: 50px; height: 50px;">IG</a>
+                    <a href="https://www.linkedin.com/in/anudeep-kumar-8aa27a2b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none" style="width: 50px; height: 50px;">IN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-black border-top border-secondary">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Anudeep Konagala. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Enhanced JavaScript -->
+    <script>
+        // Intro video functionality
+        const video = document.getElementById("introVideo");
+        const body = document.body;
+
+        // Enhanced video loading
+        video.addEventListener('loadeddata', function() {
+            console.log('Video loaded successfully');
+        });
+
+        video.addEventListener('error', function() {
+            console.log('Video failed to load, skipping intro');
+            body.classList.add("loaded");
+        });
+
+        // When video ends, add 'loaded' class to body
+        video.onended = () => {
+            body.classList.add("loaded");
+        };
+
+        // Auto-skip after 6 seconds with improved logic
+        setTimeout(() => {
+            if (!body.classList.contains("loaded")) {
+                video.pause();
+                body.classList.add("loaded");
+            }
+        }, 6000);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Performance optimization: Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Enhanced navbar behavior on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.98)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Add loading state management
+        window.addEventListener('load', function() {
+            document.body.classList.add('page-loaded');
+        });
+
+        // Error handling for background video
+        const bgVideo = document.getElementById('bg-video');
+        if (bgVideo) {
+            bgVideo.addEventListener('error', function() {
+                console.log('Background video failed to load');
+                // Fallback: Add a static background image if needed
+                const header = document.querySelector('header');
+                header.style.backgroundImage = 'linear-gradient(135deg, #000428 0%, #004e92 100%)';
+            });
+        }
+
+        // Preload critical resources
+        const preloadVideo = document.createElement('link');
+        preloadVideo.rel = 'preload';
+        preloadVideo.as = 'video';
+        preloadVideo.href = 'bg30.mp4';
+        document.head.appendChild(preloadVideo);
+
+        // Add performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                }, 0);
+            });
+        }
+
+        // Enhanced card hover effects
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+
+        // Improved responsive handling
+        function handleResize() {
+            const width = window.innerWidth;
+            const cards = document.querySelectorAll('.portfolio-card');
+            
+            if (width < 768) {
+                cards.forEach(card => {
+                    card.style.transform = 'none';
+                });
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Call on initial load
+    </script>
+</body>
+</html>
